@@ -1,7 +1,7 @@
 library(shiny)
 library(ggplot2)
 ui <- fluidPage(
-  titlePanel("Withdraw"),
+  titlePanel("Financial Planning"),
   sidebarLayout(
     sidebarPanel(
       
