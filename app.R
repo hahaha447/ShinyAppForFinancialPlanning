@@ -7,7 +7,7 @@ ui <- fluidPage(
       
       numericInput("initial_asset",label = h3( "Initial asset:"),value = 5000),
       sliderInput("Time",label = h3("End Time:"),min = 0,max = 100,value = 30),
-      sliderInput("Age",label = h3("Start age/end age:"),min = 0,max = 110,value = c(30,60)),
+      sliderInput("Age",label = h3("Start age/end age:"),min = 0,max = 110,value = c(20,80)),
       numericInput("quantile",label = h3("Quantile"),value = 0.05,step = 0.01),
       numericInput("threshold",label = h3("Threshold"),value = 0,step = 100),
       br(),
@@ -57,7 +57,7 @@ server <- function(input,output){
     return(rset)
   })
   #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  myfun <- function(r_vec,initial_asset,I=rep(1,30),EndTime=30,ending_value=0,cashflow=rep(0,50)){
+  myfun <- function(r_vec,initial_asset,I=rep(1,100),EndTime=30,ending_value=0,cashflow=rep(0,100)){
     I[1] <- 1
     cashflow_endvalue <- cashflow
     x <- prod(initial_asset,r_vec[1:EndTime])
