@@ -7,7 +7,7 @@ ui <- fluidPage(
       
       numericInput("initial_asset",label = h3( "Initial asset:"),value = 5000),
       sliderInput("Time",label = h3("End Time:"),min = 0,max = 100,value = 30),
-      sliderInput("Age",label = h3("Start age/end age:"),min = 0,max = 110,value = c(20,80)),
+      sliderInput("Age",label = h3("Start age/end age:"),min = 0,max = 110,value = c(0,110)),
       numericInput("quantile",label = h3("Quantile"),value = 0.05,step = 0.01),
       numericInput("threshold",label = h3("Threshold"),value = 0,step = 100),
       br(),
